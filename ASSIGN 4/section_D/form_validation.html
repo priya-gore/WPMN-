@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let password = document.getElementById("password").value;
+            let errorMsg = document.getElementById("error-msg");
+            let nameRegex = /^[a-zA-Z\s]+$/;
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let phoneRegex = /^[0-9]{10}$/;
+            let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+            if (!nameRegex.test(name)) {
+                errorMsg.innerText = "Invalid name. Use letters and spaces only.";
+                return false;
+            }
+            if (!emailRegex.test(email)) {
+                errorMsg.innerText = "Invalid email format!";
+                return false;
+            }
+            if (!phoneRegex.test(phone)) {
+                errorMsg.innerText = "Phone number must be 10 digits.";
+                return false;
+            }
+            if (!passwordRegex.test(password)) {
+                errorMsg.innerText = "Password must have at least 8 characters, one uppercase, one lowercase, one number, and one special character.";
+                return false;
+            }
+
+            errorMsg.innerText = "Form submitted successfully!";
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Form Validation</h2>
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <input type="text" id="phone" placeholder="Enter Phone Number" required>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="error-msg" style="color: red;"></p>
+</body>
+</html>

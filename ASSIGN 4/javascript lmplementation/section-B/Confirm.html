@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Box Example</title>
+    <script>
+        function confirmDelete() {
+            let confirmAction = confirm("Are you sure you want to delete?");
+            if (confirmAction) {
+                document.getElementById("message").innerText = "Item deleted.";
+            } else {
+                document.getElementById("message").innerText = "Action canceled.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Delete Confirmation</h2>
+    <button onclick="confirmDelete()">Delete Item</button>
+    <p id="message"></p>
+</body>
+</html>

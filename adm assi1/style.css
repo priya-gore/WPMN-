@@ -1,0 +1,182 @@
+/* @@ -0,0 +1,178 @@ */
+ /* Primary Stylesheet for IET DAVV Website */
+ /* Updated with modern design patterns */
+ 
+ /* Base Styles */
+ /* body{
+    background-color: red;
+ } */
+ .root-container {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     margin: 0 auto;
+     padding: 0;
+     background: #f5fbff;
+     color: #2a2a2a;
+     line-height: 1.6;
+ }
+ 
+ /* Top Navigation Bar */
+ .site-header {
+     background: linear-gradient(135deg, #0066cc, #0088ff);
+     color: #ffffff;
+     padding: 1.2rem 2rem;
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .institute-logo {
+     width: 90px;
+     height: auto;
+     margin-right: 1.5rem;
+     vertical-align: middle;
+ }
+ 
+ .primary-nav {
+     display: flex;
+     justify-content: center;
+     margin-top: 1rem;
+ }
+ 
+ .nav-menu {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     gap: 2rem;
+ }
+ 
+ .nav-link {
+     color: #ffffff;
+     text-decoration: none;
+     font-size: 1.1rem;
+     font-weight: 600;
+     padding: 0.5rem 1rem;
+     border-radius: 4px;
+     transition: all 0.3s ease;
+ }
+ 
+ .nav-link:hover, .nav-link.active {
+     background-color: rgba(255, 204, 0, 0.8);
+     color: #003366;
+ }
+ 
+ /* Hero Banner */
+ .main-banner {
+     background: linear-gradient(135deg, #0088ff, #00ccff);
+     color: #ffffff;
+     text-align: center;
+     padding: 5rem 2rem;
+     margin-bottom: 3rem;
+     position: relative;
+     overflow: hidden;
+ }
+ 
+ .banner-title {
+     font-size: 2.8rem;
+     margin-bottom: 1rem;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+ }
+ 
+ .banner-text {
+     font-size: 1.3rem;
+     max-width: 800px;
+     margin: 0 auto 2rem;
+ }
+ 
+ .cta-button {
+     display: inline-block;
+     background-color: #ffaa00;
+     color: #003366;
+     padding: 0.8rem 2rem;
+     border-radius: 50px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .cta-button:hover {
+     background-color: #e69500;
+     transform: translateY(-2px);
+     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+ }
+ 
+ /* Content Sections */
+ .content-section {
+     padding: 4rem 2rem;
+     margin: 0 auto;
+     max-width: 1200px;
+ }
+ 
+ .section-title {
+     color: #0066cc;
+     text-align: center;
+     margin-bottom: 2rem;
+     font-size: 2.2rem;
+ }
+ 
+ /* Program Cards */
+ .programs-container {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 2rem;
+     margin-top: 2rem;
+ }
+ 
+ .program-card {
+     background: #ffffff;
+     border-radius: 8px;
+     padding: 1.5rem;
+     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+     transition: all 0.3s ease;
+ }
+ 
+ .program-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+     background-color: #fff8e6;
+ }
+ 
+ .program-name {
+     color: #0088ff;
+     margin-bottom: 1rem;
+ }
+ 
+ /* Contact Information */
+ .contact-info {
+     background: #ffffff;
+     padding: 3rem 2rem;
+     text-align: center;
+     border-top: 3px solid #0066cc;
+ }
+ 
+ /* Site Footer */
+ .site-footer {
+     background: linear-gradient(135deg, #0066cc, #0088ff);
+     color: #ffffff;
+     text-align: center;
+     padding: 2rem;
+     margin-top: 3rem;
+ }
+ 
+ .copyright {
+     font-weight: 500;
+ }
+ 
+ /* Responsive Adjustments */
+ @media (max-width: 768px) {
+     .nav-menu {
+         flex-direction: column;
+         gap: 1rem;
+     }
+     
+     .programs-container {
+         grid-template-columns: 1fr;
+     }
+     
+     .banner-title {
+         font-size: 2rem;
+     }
+ }

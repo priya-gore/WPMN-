@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function changeColor(element) {
+            element.style.backgroundColor = "yellow";
+        }
+        function resetColor(element) {
+            element.style.backgroundColor = "white";
+        }
+    </script>
+</head>
+<body>
+    <h2>Hover to Change Color</h2>
+    <div id="box" onmouseover="changeColor(this)" onmouseout="resetColor(this)" style="width: 100px; height: 100px; border: 1px solid black;"></div>
+</body>
+</html>
